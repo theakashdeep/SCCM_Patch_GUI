@@ -1,3 +1,4 @@
+
 # Get current user data
 $scriptUser = $env:USERNAME
 $scriptUserN = Get-ADUser $scriptUser
@@ -1681,5 +1682,6 @@ $checkQuickCompCheck.Add_Click({
     # Set focus to dropdown
     $form.add_shown({ $dropDCList.select() })
     $status = $form.ShowDialog()
-    # AD Verification
-    else { Write-Host "Not authorized" -ForegroundColor Red }
+}
+# AD Verification
+else { Write-Host "Not authorized" -ForegroundColor Red }
